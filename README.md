@@ -1,5 +1,4 @@
-# SQL
-Create you own grocery store database_SQL Portfolio
+--Create your own grocery store database for the store called Integral Eats
 
 CREATE TABLE Integral_Eats (id INTEGER PRIMARY KEY, item TEXT, aisle INTEGER, price INTEGER, quality TEXT);
 INSERT INTO Integral_Eats VALUES
@@ -19,8 +18,15 @@ INSERT INTO Integral_Eats VALUES(13, "LIFE Cereal",6,6,"Fair”);
 INSERT INTO Integral_Eats VALUES(14, "Bagels",5,2,"Great");
 INSERT INTO Integral_Eats VALUES(15, "Cream Cheese", 1,5, "Delectable");
 
+--List all items in store with the items, aisle, location, price listed, and customer review preference. 
 SELECT*FROM Integral_Eats;
+
+--Display the sum of the items per aisle.
 SELECT aisle, SUM(aisle) FROM Integral_Eats GROUP BY aisle;
+
+--Display all of the items in the Integral Eats store database.
 SELECT SUM(aisle) FROM Integral_Eats;
 
+--Order items that cost $2 or more dollars in ascending order.
 SELECT*FROM Integral_Eats WHERE price >=2 ORDER BY price asc;
+
